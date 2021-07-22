@@ -1,0 +1,30 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #052e05, #7af8ab);
+    background-size: cover;
+    color: #fff;
+}
+
+
+.card{
+    width: 100%;
+    top: 50%;
+    height: auto;
+    border-radius: 40px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+                0 10px 10px rgba(0,0,0,0.22);
+}
+.card .card-header h3{
+    color:#052e05;
+    font-size: 30px;
+    text-align: center;
+}
+.card .card-body{
+width: 100%;
+height: auto;
+}   
+.card-body .form-group input{
+    width: 100%;
+    border-radius: 5px;  
+}
