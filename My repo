@@ -1,0 +1,36 @@
+<?php
+include "dbconnect/dbconnect.php";
+
+if(isset($_GET['submit'])){
+$name = $_GET['name'];
+$age = $_GET['age'];
+$age = $_GET['phone'];
+$age = $_GET['gender'];
+$address = $_GET['address'];
+$section = $_GET['section'];
+$message;
+
+$sql = "INSERT INTO register (name, age, phone, gender, address, section) VALUES (:name, :age, :phone, :gender, :address, :section)";
+if($stmt = $pdo->prepare($sql)){
+            
+            $stmt->bindParam(":name", $name);
+            $stmt->bindParam(":age", $age);
+            $stmt->bindParam(":phone", $phone);
+            $stmt->bindParam(":gender", $gender);
+            $stmt->bindParam(":address", $address);
+            $stmt->bindParam(":section", $section);
+            
+
+    if($stmt->execute()){
+                
+                $message="Pateint record is saved   successfully";
+                exit();
+            } else{
+                echo "record not save.";
+            }
+}
+}
+
+
+
+?>
